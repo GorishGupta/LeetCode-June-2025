@@ -15,7 +15,7 @@ public class DS135 {
         }
         return cnt + candies[n - 1];
     }
-
+    //main  
     public static void main(String[] args) {
         DS135 solution = new DS135();
         int[] ratings = { 1, 0, 2 }; // Example ratings
