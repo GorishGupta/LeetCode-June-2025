@@ -21,4 +21,11 @@ public class DS2434 {
         }
         return res.toString();
     }
+
+    public static void main(String[] args) {
+        DS2434 solution = new DS2434();
+        String s = "zza";
+        String result = solution.robotWithString(s);
+        System.out.println("Result: " + result); // Expected output: "azz"
+    }
 }
