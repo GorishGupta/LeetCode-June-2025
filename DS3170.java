@@ -2,33 +2,36 @@ import java.util.*;
 
 public class DS3170 {
     public String clearStars(String s) {
-        int n = s.length();
-        PriorityQueue<Character> pq = new PriorityQueue<>();
-        Map<Character, Deque<Integer>> map = new HashMap<>();
-        boolean[] keep = new boolean[n];
-        Arrays.fill(keep, true);
-
-        for (int i = 0; i < n; i++) {
-            char c = s.charAt(i);
-            if (c == '*') {
-                char smallest = pq.poll();
-                int indexToRemove = map.get(smallest).removeLast();
-                keep[i] = false; // Remove '*'
-                keep[indexToRemove] = false; // Remove smallest char
-            } else {
-                pq.offer(c);
-                map.putIfAbsent(c, new ArrayDeque<>());
-                map.get(c).add(i);
-            }
+        ArrayList<ArrayList<Integer>> charIndices = new ArrayList<>();
+        for (int i = 0; i < 26; i++)
+            charIndices.add(new ArrayList<>());
+        boolean[] removed = new boolean[s.length()];
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            if (ch == '*') {
+                for (int j = 0; j < 26; j++) {
+                    if (!charIndices.get(j).isEmpty()) {
+                        int lastIndex = charIndices.get(j).size() - 1;
+                        int removeIndex = charIndices.get(j).get(lastIndex);
+                        removed[removeIndex] = true;
+                        charIndices.get(j).remove(lastIndex);
+                        break;
+                    }
+                }
+            } else
+                charIndices.get(ch - 'a').add(i);
         }
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < s.length(); i++)
+            if (s.charAt(i) != '*' && !removed[i])
+                sb.append(s.charAt(i));
+        return sb.toString();
+    }
 
-        StringBuilder result = new StringBuilder();
-        for (int i = 0; i < n; i++) {
-            if (keep[i]) {
-                result.append(s.charAt(i));
-            }
-        }
-
-        return result.toString();
+    public static void main(String[] args) {
+        DS3170 solution = new DS3170();
+        String s = "ab*c*d*e";
+        String result = solution.clearStars(s);
+        System.out.println("Result: " + result); // Expected output: "ae"
     }
 }
