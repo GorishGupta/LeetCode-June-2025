@@ -19,4 +19,11 @@ public class DS386 {
             solve(next, n, ans);
         }
     }
+
+    public static void main(String[] args) {
+        int n = 13; // Example input
+        List<Integer> result = lexicalOrder(n);
+        System.out.println("Lexical order up to " + n + ": " + result); // Expected output: [1, 10, 11, 12, 13, 2, 3, 4,
+                                                                        // 5, 6, 7, 8, 9]
+    }
 }
