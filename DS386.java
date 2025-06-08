@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class DS386 {
     static public List<Integer> lexicalOrder(int n) {
         List<Integer> ans = new ArrayList<>();
