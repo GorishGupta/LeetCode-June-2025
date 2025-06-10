@@ -8,7 +8,6 @@ class DS1061 {
         return parent[x];
     }
 
-    // Union-Find (Disjoint Set Union) to merge characters
     private void union(int u, int v) {
         int ultPar_u = findUltPar(u);
         int ultPar_v = findUltPar(v);

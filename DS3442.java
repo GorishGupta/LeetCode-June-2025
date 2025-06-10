@@ -18,8 +18,8 @@ public class DS3442 {
 
     public static void main(String[] args) {
         DS3442 ds3442 = new DS3442();
-        String s = "abccba"; // Example input
+        String s = "abccba";
         int result = ds3442.maxDifference(s);
-        System.out.println("The maximum difference is: " + result); // Expected output: 2
+        System.out.println("The maximum difference is: " + result);
     }
 }
