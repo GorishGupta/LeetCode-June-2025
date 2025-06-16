@@ -12,4 +12,8 @@ class DS2016 {
 
         return maxDifference;
     }
+
+    public static void main(String[] args) {
+
+    }
 }
