@@ -14,6 +14,8 @@ class DS2016 {
     }
 
     public static void main(String[] args) {
-
+        DS2016 solution = new DS2016();
+        int[] nums = { 7, 1, 5, 4, 6, 3 };
+        System.out.println("Maximum Difference: " + solution.maximumDifference(nums)); // Output: 5
     }
 }
