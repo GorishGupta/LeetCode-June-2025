@@ -13,6 +13,7 @@ class DS2016 {
         return maxDifference;
     }
 
+    // main Function
     public static void main(String[] args) {
         DS2016 solution = new DS2016();
         int[] nums = { 7, 1, 5, 4, 6, 3 };
