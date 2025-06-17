@@ -37,4 +37,10 @@ class DS3405 {
             return a;
         return mod - mod / a * rev(mod % a) % mod;
     }
+
+    public static void main(String[] args) {
+        DS3405 solution = new DS3405();
+        int n = 5, m = 3, k = 2;
+        System.out.println("Count of Good Arrays: " + solution.countGoodArrays(n, m, k)); // Example output
+    }
 }
