@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 class DS2294 {
     public int partitionArray(int[] nums, int k) {
         Arrays.sort(nums);
