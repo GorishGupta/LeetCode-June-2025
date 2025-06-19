@@ -11,4 +11,12 @@ class DS2294 {
         }
         return ans;
     }
+
+    public static void main(String[] args) {
+        DS2294 solution = new DS2294();
+        int[] nums = { 1, 3, 6, 7, 9 };
+        int k = 2;
+        int result = solution.partitionArray(nums, k);
+        System.out.println("Minimum number of partitions: " + result);
+    }
 }
