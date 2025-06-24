@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 class DS2200 {
 
     public List<Integer> findKDistantIndices(int[] nums, int key, int k) {
@@ -14,5 +17,14 @@ class DS2200 {
             }
         }
         return res;
+    }
+
+    public static void main(String[] args) {
+        DS2200 solution = new DS2200();
+        int[] nums = { 3, 4, 9, 1, 3, 9, 5 };
+        int key = 9;
+        int k = 1;
+        List<Integer> result = solution.findKDistantIndices(nums, key, k);
+        System.out.println("Indices that are at most " + k + " distance from key " + key + ": " + result);
     }
 }
