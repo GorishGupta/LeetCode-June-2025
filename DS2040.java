@@ -47,6 +47,7 @@ public class DS2040 {
     }
 
     public static void main(String[] args) {
+        //example
         DS2040 solution = new DS2040();
         int[] nums1 = { 1, 7 };
         int[] nums2 = { 3, 4 };
