@@ -32,6 +32,7 @@ class DS2099 {
 
         return ans;
     }
+    // Example usage
 
     public static void main(String[] args) {
         DS2099 solution = new DS2099();
