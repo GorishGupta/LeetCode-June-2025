@@ -1,4 +1,6 @@
-class Solution {
+import java.util.Arrays;
+
+class DS594 {
     static {
         for (int i = 0; i < 500; i++) {
             findLHS(new int[] { 1, 2, 3, 4 });
